@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css?family=Acme");
+
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #b3b0ad;
+}
+
+header {
+	padding-top: 15px;
+	padding-bottom: 25px;
+	text-align: center;
+	font-family: Acme, sans-serif;
+	font-size: 2em;
+}
+
+.container {
+	padding: 10px;
+	min-width: 500px;
+	width: calc(100vw - 2em);
+	min-height: 450px;
+	height: 700px;
+	margin: 0 auto;
+	background-color: rgb(22, 26, 59);
+}
+
+.scoreboard {
+	margin: 40px auto;
+	border: 3px solid white;
+	border-radius: 3px;
+	width: 400px;
+	font-size: 56px;
+	text-align: center;
+	color: azure;
+	padding: 15px 20px;
+	font-family: Acme, sans-serif;
+	position: relative;
+}
+
+.badge {
+	background: #9c4242;
+	font-size: 28px;
+	padding: 5px 10px;
+}
+
+#user {
+	position: absolute;
+	top: 25px;
+	left: -40px;
+}
+
+#comp {
+	position: absolute;
+	top: 25px;
+	right: -45px;
+}
+
+.result {
+	color: azure;
+	font-size: 56px;
+}
+
+.result p {
+	text-align: center;
+	font-family: Acme, sans-serif;
+}
+
+.choices {
+	margin: 30px auto;
+	text-align: center;
+}
+
+.choice {
+	margin: auto 25px;
+	padding: 20px;
+	display: inline-block;
+	border: 2px solid white;
+	border-radius: 50%;
+	transition: all 0.7s ease;
+}
+
+.choice:hover {
+	background-color: rgb(52, 56, 99);
+	cursor: pointer;
+}
+
+.action-message {
+	margin-top: 30px;
+	font-size: 46px;
+	color: azure;
+	font-family: Acme, sans-serif;
+	text-align: center;
+}
+
+.green-glow {
+	border: 3px solid rgb(47, 155, 47);
+	box-shadow: 0 0 10px rgb(52, 102, 55);
+}
+
+.red-glow {
+	border: 3px solid rgb(202, 36, 31);
+	box-shadow: 0 0 10px rgb(107, 26, 20);
+}
+
+.gray-glow {
+	border: 3px solid rgb(119, 122, 119);
+	box-shadow: 0 0 10px rgb(46, 46, 46);
+}
