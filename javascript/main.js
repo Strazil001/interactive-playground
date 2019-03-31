@@ -1,6 +1,5 @@
 let userScore = 0;
 let compScore = 0;
-const scoreboard_div = document.querySelector(".scoreboard");
 const userScore_span = document.querySelector(".user-score");
 const compScore_span = document.querySelector(".comp-score");
 const result_p = document.querySelector(".result > p");
@@ -33,6 +32,7 @@ function win(userChoice, computerChoice) {
 	greenGlow.classList.add("green-glow");
 	setTimeout(() => greenGlow.classList.remove("green-glow"), 700);
 }
+
 function lose(userChoice, computerChoice) {
 	const redGlow = document.getElementById(userChoice);
 	compScore++;
@@ -44,7 +44,8 @@ function lose(userChoice, computerChoice) {
 	redGlow.classList.add("red-glow");
 	setTimeout(() => redGlow.classList.remove("red-glow"), 700);
 }
-function draw(userChoice) {
+
+function draw(userChoice, computerChoice) {
 	const grayGlow = document.getElementById(userChoice);
 	userScore_span.innerHTML = userScore;
 	compScore_span.innerHTML = compScore;
@@ -71,15 +72,21 @@ function game(userChoice) {
 		case "rr":
 		case "pp":
 		case "ss":
-			draw(userChoice);
+			draw(userChoice, computerChoice);
 			break;
 	}
 }
 
 function main() {
-	rock_div.addEventListener("click", () => game("r"));
-	paper_div.addEventListener("click", () => game("p"));
-	scissor_div.addEventListener("click", () => game("s"));
+	rock_div.addEventListener("click", () => {
+		return game("r");
+	});
+	paper_div.addEventListener("click", () => {
+		return game("p");
+	});
+	scissor_div.addEventListener("click", () => {
+		return game("s");
+	});
 }
 
 main();
